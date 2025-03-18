@@ -1,0 +1,681 @@
+<html>
+ <head>
+    <title>MyWebsite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+ <body>
+  <div class="top-bar">
+   <div class="left">
+    <a href="#"><i class="fas fa-heart"></i>Giới thiệu</a>
+    <a href="#"><i class="fas fa-chalkboard-teacher"></i>Giảng viên</a>
+    <a href="#"><i class="fas fa-star"></i>Talents</a>
+    <a href="#"><i class="fas fa-puzzle-piece"></i>Creative quiz</a>
+    <a href="#"><i class="fas fa-book"></i>Thư viện<span style="background-color: red; color: white; padding: 2px 5px; border-radius: 3px;">MỚI</span></a>
+    <a href="#"><i class="fas fa-bolt"></i>Quiz<span style="background-color: red; color: white; padding: 2px 5px; border-radius: 3px;">MỚI</span></a>
+    <a href="#"><i class="fas fa-wrench"></i>Challenge<span style="background-color: red; color: white; padding: 2px 5px; border-radius: 3px;">MỚI</span></a>
+   </div>
+   <div class="right">
+    <div class="language">
+     <a href="#">Tiếng Việt (VI)<i class="fas fa-caret-down"></i></a>
+    </div>
+    <a href="#"><i class="fas fa-search"></i>Tìm kiếm</a>
+   </div>
+  </div>
+  <div class="main-nav">
+   <div class="logo">
+    <img alt="Logo" height="40" src="/assets/logo.png" width="40"/>
+   </div>
+   <div class="menu">
+    <a href="#">Việc làm</a>
+    <div class="dropdown">
+     <a href="#">Khóa học<i class="fas fa-caret-down"></i></a>
+     <div class="dropdown-content">
+      <a href="#">Khóa học 1</a>
+      <a href="#">Khóa học 2</a>
+      <a href="#">Khóa học 3</a>
+     </div>
+    </div>
+    <a href="#">Dịch vụ</a>
+    <a href="#">Blog</a>
+    <a href="#">Học viên</a>
+    <a href="#">Giảng viên</a>
+   </div>
+   <a class="login-btn" href="#"><i class="fas fa-sign-in-alt"></i>Đăng nhập</a>
+   <button class="navbar-toggler" onclick="toggleMenu()">☰ Menu</button>
+  </div>
+  <div class="content">
+    <div class="main-content">
+        <img id="scrollImg" class="position-absolute top-0"style="right: 15%; width: 10%; rotate: 90deg; transform: translate3d(0px, 7.2px, 0px);"src="https://d1j8r0kxyu9tj8.cloudfront.net/files/diWqAOce9TfR3dX5LJ66MzDshyGl19ccOBTsxr8x.png"alt="">
+        <img id="scrollImg2" class="position-absolute pt-5 w-25"
+        style="left: -15%; top: 10%; transform: translate3d(0px, 24.8px, 0px);"
+        src="https://d1j8r0kxyu9tj8.cloudfront.net/files/707adA8uwKnTu3MfJ5ehyFtoPm4H1YkIqbywgbMU.png"alt="">
+           <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+            <img class="image-circular" style="width: 7%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/938U6Lyn6BMm3ysE8s591i8dK98ztQBsy0t6t4hY.png" alt="">
+            <div class="text-dark-purple f-Matahari-SemiBold display-4 line-height-1 mt-4">
+                LÀM CHỦ
+            </div>
+            <div class="text-canva f-darker-grotesque-extra-bold">
+                CANVA
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <img class="position-relative" style="width: 150%; right: 10%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/HNOQrsUsdh32yFM8jy8a4A3Cbs79YVtUtxjnhIiK.png" alt="">
+                </div>
+            </div>
+            <div class="col-4">
+                <img class="position-relative" style="width: 150%; left: -25%;z-index: 10;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/0tPk4KcNVpU5aWQCuqlF8gcTW4NlK8fl5xowArOf.png" alt="">
+            </div>
+            <div class="col-4">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <img class="position-relative" style="width: 150%; left: 10%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/cMQsPkLWRSc8WHpEdqqg9rHlV0QVlyiaFqG9nYN7.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="text-center f-Matahari-SemiBold">
+            Khóa học giúp bạn khai phá sức mạnh của phần mềm Canva và <br class="d-none d-md-block">
+            tạo ra các ấn phẩm truyền thông ấn
+            tượng chỉ sau 8 buổi!
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <a type="button" href="#pick-class" class="bg-dark-purple px-4 py-2 rounded-pill">
+                <p class="f-Matahari-Bold m-0 text-white">Đăng ký ngay</p>
+            </a>
+        </div>
+        <div class="container py-5 my-5 position-relative" style="z-index: 10;">
+            <img id="scrollImg3" class="position-absolute right-0 scroll-vertical-up-4" style="top: -30%; width: 20%; transform: translate3d(0px, 121.6px, 0px); animation: auto ease 0s 1 normal none running none;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/QSIxsBEHqbWqKknTJKcuOU4VO6zafR4njBmdoxQb.png" alt="">
+            <img class="position-absolute top-0 image-circular" style="width: 20%;left: -10%" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/nRPhXBAQXBEbmhfYpDMQbBCrIPzVPBUGuu3tKSMc.png" alt="">
+            <img id="scrollImg4" class="position-absolute bottom-0 image-circular scroll-vertical-up-3" style="width: 15%; right: -10%; transform: translate3d(0px, 91.2px, 0px); animation: auto ease 0s 1 normal none running none;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/UEJg6P0e2T24IbK41O7N7igDtuLbPKUzaky5HjYV.png" alt="">
+            <div class="bg-linear-gradient-pink rounded-20 mt-5 position-relative z-1">
+                <div class="container">
+                    <div class="section">
+                     <div class="image-container">
+                      <img alt="" class="image-rotate-20" height="500" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Sp3i8Kk1ZKvKVbfNrxfSmUOUwkX48PVUySdohOgY.png"/>
+                     </div>
+                     <div class="section-content">
+                      <h2>Bạn muốn...</h2>
+                      <ul>
+                       <li>Tự tay tạo ra các ấn phẩm thiết kế “xịn sò” không cần phải thành thạo các phần mềm chỉnh sửa phức tạp.</li>
+                       <li>Tận dụng kho template có sẵn nhưng vẫn thể hiện được phong cách thiết kế riêng.</li>
+                       <li>Nâng cao kỹ năng thiết kế nhanh chóng và tiết kiệm tối đa thời gian, chi phí đầu tư.</li>
+                      </ul>
+                     </div>
+                    </div>
+                    <div class="section">
+                     <div class="section-content">
+                      <h2>Và bạn đang tìm kiếm</h2>
+                      <ul>
+                       <li>Một khóa học “cấp tốc” giúp bạn tạo ra các thiết kế chất lượng phục vụ công việc nhanh chóng.</li>
+                       <li>Một lộ trình học tập cụ thể và tối ưu để bạn tiết kiệm chi phí đầu tư và thời gian học.</li>
+                       <li>Sự đồng hành của những giảng viên, trợ giảng nhiệt tình có chuyên môn cao.</li>
+                      </ul>
+                     </div>
+                     <div class="image-container">
+                      <img alt="" class="image-rotate-minus-10" height="500" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/hHc97rjmmudJkrZtlcHzi0ny1LtDYqkbcoOPGgUv.png"/>
+                     </div>
+                    </div>
+                   </div>
+        </div>
+    </div>
+  </div>
+  <div class="mid-content">
+    <div class="wave-background">
+        <div class="main-container">
+            <div class="header">
+             BẠN SẼ TÌM THẤY
+            </div>
+            <div class="subheader">
+             NHỮNG ĐIỀU ĐÓ TẠI KHÓA HỌC CANVA
+            </div>
+            <a class="register-button" href="#">
+             Đăng ký ngay
+            </a>
+            <div class="cards">
+             <div class="card">
+              <img alt="" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/wJfRR47hPCVShgY7hDWStjhqheAJdf3HL1NbvcOr.png" width="250"/>
+              <div class="image-overlay">
+               <img alt="" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/edJYhlm5XS7YTFBNGnJbwtGZugYZQoZRY5WTTxXZ.png" width="250"/>
+              </div>
+              <div class="card-content">
+               <div class="card-title">XÂY DỰNG VÀ CẢI THIỆN TƯ DUY THIẾT KẾ</div>
+               <div class="card-text">Cải thiện tư duy sáng tạo để tự tin biến ý tưởng thành hiện thực ngay trên phần mềm Canva.</div>
+              </div>
+             </div>
+             <div class="card">
+              <img alt="" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/kjMyLZXjU9k6Y0NsiBaFUfLXWY4JjnFaS07DFdfS.png" width="250"/>
+              <div class="image-overlay">
+               <img alt="" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Nj9mtXPhk0WglTOcC2bDT45TVcq0MOoTahTvvA8A.png" width="250"/>
+              </div>
+              <div class="card-content">
+               <div class="card-title">TẬN DỤNG KHO TEMPLATE</div>
+               <div class="card-text">Trang bị kỹ năng tận dụng các template có sẵn để tối ưu thời gian thiết kế nhưng vẫn thể hiện được ý tưởng của mình.</div>
+              </div>
+             </div>
+             <div class="card">
+              <img alt="" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/XWfSkV8DXMTzMouAF3nmdqnhCvHaBsRoWcxHu6CA.png" width="250"/>
+              <div class="image-overlay">
+               <img alt="" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/edJYhlm5XS7YTFBNGnJbwtGZugYZQoZRY5WTTxXZ.png" width="250"/>
+              </div>
+              <div class="card-content">
+               <div class="card-title">KHAI PHÁ SỨC MẠNH AI</div>
+               <div class="card-text">Cung cấp kiến thức và cách áp dụng các tính năng AI trên Canva để bạn tạo ra những ấn phẩm truyền thông đột phá.</div>
+              </div>
+             </div>
+             <div class="card">
+              <img alt="" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Z04axnFFCvUgKG5gTyMnbXPUTHgd9HKaQr5L882Z.png" width="250"/>
+              <div class="image-overlay">
+               <img alt="" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Nj9mtXPhk0WglTOcC2bDT45TVcq0MOoTahTvvA8A.png" width="250"/>
+              </div>
+              <div class="card-content">
+               <div class="card-title">LÀM MỌI THỨ TRONG MỘT PHẦN MỀM DUY NHẤT</div>
+               <div class="card-text">Sáng tạo nhiều loại hình truyền thông như poster, infographic, video ngắn... chỉ trên phần mềm Canva.</div>
+              </div>
+             </div>
+             <div class="card">
+              <img alt="A group of people working together" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/DSGczYOZspnPxCDiCvJLhvN79HBO9hcRKct7IrbC.png" width="250"/>
+              <div class="image-overlay">
+               <img alt="A design template" height="150" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/edJYhlm5XS7YTFBNGnJbwtGZugYZQoZRY5WTTxXZ.png" width="250"/>
+              </div>
+              <div class="card-content">
+               <div class="card-title">THỰC HÀNH SẢN XUẤT ẤN PHẨM NGAY TRÊN LỚP</div>
+               <div class="card-text">Tự tay tạo ra các ấn phẩm thực tế, có tính ứng dụng cao ngay tại lớp.</div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <img alt="Messenger icon" class="messenger-icon" height="50" src="https://storage.googleapis.com/a1aa/image/On-0A-cJeGhBU7TVNffzsB380LgFMGO-VQCWmnJXdAM.jpg" width="50"/>
+      </div>
+  </div>
+  <div class="container-2">
+    <div class="header-2">
+     <img id="scrollImg4" alt=""  src="https://d1j8r0kxyu9tj8.cloudfront.net/files/diWqAOce9TfR3dX5LJ66MzDshyGl19ccOBTsxr8x.png" />
+     <div>
+      <h1>
+       ĐƯỢC XÂY DỰNG LỘ TRÌNH MANG TÍNH ỨNG DỤNG CAO
+      </h1>
+      <h2>
+       KHÓA HỌC NÀY DÀNH CHO
+      </h2>
+     </div>
+    </div>
+    <div class="cards-2">
+     <div class="card-2" style="background-image: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/rKBjJpfZ0HVq7vxtgg216PMOy2eJmucxrtTRDPxT.png')">
+      <img alt="" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/TAiIMCHINHjZylSUBgcUiFo70mgtMiioUGBKbfLM.png"/>
+      <h3>
+       HỌC SINH, SINH VIÊN
+      </h3>
+      <p>
+       Tự thiết kế slide, poster, banner,... cho các bài tập nhóm hay các dự án cá nhân hoặc apply vào các câu lạc bộ sinh viên.
+      </p>
+     </div>
+     <div class="card-2" style="background-image: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/KzbAJZpz6QcU6hssKJ1qmGFFxkUck0lp7O5gBOZY.png')">
+      <img alt="" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/HgnWNlEBc66mdARgZouM8VvtUizaWbFmsMG82yAZ.png"/>
+      <div class="card-2-content">
+        <h3>NHÂN VIÊN VĂN PHÒNG</h3>
+        <p>Tiết kiệm tối đa thời gian và công sức thiết kế phần hình ảnh nhưng vẫn trực quan hóa dữ liệu trong các buổi họp, pitching dự án.</p>
+    </div>
+     </div>
+     <div class="card-2" style="background-image: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/rKBjJpfZ0HVq7vxtgg216PMOy2eJmucxrtTRDPxT.png')">
+      <img alt="" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/a487mhydqBKjdmBwWpLIwd5GwcYpkisEqVZ9kbgK.png"/>
+      <h3>
+       CHỦ SHOP KINH DOANH
+      </h3>
+      <p>
+       Trang bị thêm kỹ năng mới phục vụ quá trình kinh doanh và chủ động trong khâu quản trị hình ảnh thương hiệu.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="consultation-2">
+    <i class="fas fa-headset">
+    </i>
+    <span>
+     Nhận tư vấn
+    </span>
+   </div>
+   <div class="container-f" style="background-image: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/orlR44WoaSWSFMKacMCyybXeN7qzHRSODj2YQgJl.png')">
+    <img class="position-absolute top-0 image-circular" style="width: 20%;left: -10%" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/nRPhXBAQXBEbmhfYpDMQbBCrIPzVPBUGuu3tKSMc.png" alt="">    <img  id="bounceImg" class="position-absolute w-25 right-0 scroll-vertical-up-2" style=" transform: translate3d(0px, 251.52px, 0px); animation: auto ease 0s 1 normal none running none;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/TTTHEgA8PxprNCQiFPqrvG2ezGzwtfNkADCySNLN.png" alt="">
+    <div class="container-3">
+    <div class="header-3">
+     <div>
+      <h1>
+       LỘ TRÌNH HỌC
+      </h1>
+      <p>
+       GIÚP BẠN "LÀM CHỦ CANVA"
+      </p>
+     </div>
+     <button class="register-button-3">
+      Đăng ký ngay
+     </button>
+    </div>
+    <div class="buttons-3">
+     <button>
+      8 BUỔI
+     </button>
+     <button>
+      1 THÁNG
+     </button>
+     <button>
+      ALL-IN-ONE
+     </button>
+    </div>
+    <div class="grid-3">
+     <div class="card-3">
+      <div class="card-content-3">
+       <h3>
+        BUỔI 1
+       </h3>
+       <p>
+        LÀM QUEN VỚI CANVA
+       </p>
+       <ul>
+        <li>
+         Giới thiệu khoá học &amp; Canva
+        </li>
+        <li>
+         Giao diện &amp; thao tác cơ bản
+        </li>
+        <li>
+         Giới thiệu kho tài nguyên của Canva
+        </li>
+       </ul>
+      </div>
+      <div class="card-footer-3">
+       <span>
+       </span>
+       <a href="#">
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="card-3">
+      <img alt="" height="200" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Opt1CtGXmaaPNOCbKajeo4An4t4gequjKySe0G7P.png" width="300"/>
+     </div>
+     <div class="card-3">
+      <div class="card-content-3">
+       <h3>
+        BUỔI 2
+       </h3>
+       <p>
+        LÀM VIỆC VỚI HÌNH ẢNH VÀ TEXT
+       </p>
+       <ul>
+        <li>
+         Một số khái niệm cơ bản về hình ảnh
+        </li>
+        <li>
+         Thao tác &amp; chỉnh sửa hình ảnh với Canva
+        </li>
+        <li>
+         Lý thuyết cơ bản về Text
+        </li>
+       </ul>
+      </div>
+      <div class="card-footer-3">
+       <span>
+       </span>
+       <a href="#">
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="card-3">
+      <img alt="" height="200" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/azcwDjufSgljHmhFLJMA99HbPaCQo08XsqojZwDl.png" width="300"/>
+     </div>
+     <div class="card-3">
+      <div class="card-content-3">
+       <h3>
+        BUỔI 3
+       </h3>
+       <p>
+        BỘ CỤC VÀ MÀU SẮC TRONG THIẾT KẾ
+       </p>
+       <ul>
+        <li>
+         Dựng các bố cục
+        </li>
+        <li>
+         Lý thuyết về màu sắc
+        </li>
+        <li>
+         Thực hành thiết kế thiệp mời
+        </li>
+       </ul>
+      </div>
+      <div class="card-footer-3">
+       <span>
+       </span>
+       <a href="#">
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="card-3">
+      <img alt="" height="200" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/W61e3YPBpK1yEJsqLsOvJNaCorH9mBVANy1JG53z.png" width="300"/>
+     </div>
+     <div class="card-3">
+      <div class="card-content-3">
+       <h3>
+        BUỔI 4
+       </h3>
+       <p>
+        MỘT SỐ NGUYÊN LÝ CƠ BẢN VÀ QUY TRÌNH THIẾT KẾ
+       </p>
+       <ul>
+        <li>
+         Một số nguyên lý thiết kế cơ bản
+        </li>
+        <li>
+         Quy trình thiết kế
+        </li>
+        <li>
+         Thực hành thiết kế Poster
+        </li>
+       </ul>
+      </div>
+      <div class="card-footer-3">
+       <span>
+       </span>
+       <a href="#">
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="card-3">
+      <img alt="" height="200" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/PjfIUdiCeIiJTUqFLPsTOQM7LlAYgTef5cW8YKvb.png" width="300"/>
+     </div>
+     <div class="card-3">
+      <div class="card-content-3">
+       <h3>
+        BUỔI 5
+       </h3>
+       <p>
+        THIẾT KẾ ẤN PHẨM SOCIAL MEDIA
+       </p>
+       <ul>
+        <li>
+         Các loại ấn phẩm phổ biến cho Social Media
+        </li>
+        <li>
+         Thực hành thiết kế 1 ấn phẩm Social Media
+        </li>
+       </ul>
+      </div>
+      <div class="card-footer-3">
+       <span>
+       </span>
+       <a href="#">
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="card-3">
+      <img alt="" height="200" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/4nvBCby0dJFcP3cT9e0elRw3Uy0EtqCWgbG3whMt.png" width="300"/>
+     </div>
+     <div class="card-3">
+      <div class="card-content-3">
+       <h3>
+        BUỔI 6
+       </h3>
+       <p>
+        THIẾT KẾ SLIDE
+       </p>
+       <ul>
+        <li>
+         Quy trình thiết kế Slide
+        </li>
+        <li>
+         Hiệu ứng &amp; Chuyển cảnh trong Slide
+        </li>
+        <li>
+         Thuyết trình với Canva
+        </li>
+       </ul>
+      </div>
+      <div class="card-footer-3">
+       <span>
+       </span>
+       <a href="#">
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="card-3">
+      <img alt="Designing Slides" height="200" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/FTmYnsWLdH7WeQwgors1CWTWAxDhyUHt439wiLVm.png" width="300"/>
+     </div>
+     <div class="card-3">
+      <div class="card-content-3">
+       <h3>
+        BUỔI 7
+       </h3>
+       <p>
+        CHỈNH SỬA VIDEO VỚI CANVA
+       </p>
+       <ul>
+        <li>
+         Một số lý thuyết cơ bản về video
+        </li>
+        <li>
+         Thao tác &amp; chỉnh sửa video với Canva
+        </li>
+        <li>
+         Thực hành chỉnh sửa video bằng Canva
+        </li>
+       </ul>
+      </div>
+      <div class="card-footer-3">
+       <span>
+       </span>
+       <a href="#">
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="card-3">
+      <img alt="" height="200" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Fd4L0gUzRWUtx3Qe4BiYcF4DgGiYcT24zmjxLZgK.png" width="300"/>
+     </div>
+     <div class="card-3">
+      <div class="card-content-3">
+       <h3>
+        BUỔI 8
+       </h3>
+       <p>
+        TỔNG KẾT VÀ ĐÁNH GIÁ
+       </p>
+       <ul>
+        <li>
+         Xem lại &amp; chấm điểm bài cuối kỳ
+        </li>
+        <li>
+         Một số ứng dụng &amp; tính năng khác của Canva
+        </li>
+        <li>
+         Chia sẻ kinh nghiệm thiết kế
+        </li>
+       </ul>
+      </div>
+      <div class="card-footer-3">
+       <span>
+       </span>
+       <a href="#">
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="card-3">
+      <img alt="" height="200" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/ypRdb39ysAXQQeexqn3BlkCLJA9i0mcGCKgFSc70.png" width="300"/>
+     </div>
+    </div>
+   </div>
+    </div>
+    <img class="w-100" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/eW7mJ5LHW7gOGpmVvkTdWnWl4WrRlSmeRiThSlgp.png" alt="">
+    <div class="container-4">
+        <div class="header-4">
+            <h1>COLORME?</h1>
+            <p class="subtitle">
+                Với 9 năm kinh nghiệm trong lĩnh vực đào tạo thiết kế đa phương tiện,<br>
+                cùng phương châm lấy học viên làm trọng tâm, colorME đã và đang:
+            </p>
+        </div>
+        
+        <div class="grid-container">
+            <div class="laptop-section">
+                <div class="laptop-image">
+                    <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Y2xrtw6GzAMkjLY00BR2mQkJRegdfDi9F7vm9Hoc.png" alt="Laptop với ứng dụng học tập">
+                </div>
+                <div class="laptop-text">
+                    <p>Ứng dụng công nghệ trong quá trình giảng dạy nhằm tối ưu hóa trải nghiệm học</p>
+                </div>
+            </div>
+            
+            <div class="methodology-section">
+                <div class="methodology-image">
+                    <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Y4i34Re6ivgVSC2L2SmZFuC8mopQj1RnpmMdcdYT.png" alt="Phương pháp học tập">
+                </div>
+                <div class="methodology-text">
+                    <p>Phương pháp học tập tiên tiến, mang tính ứng dụng cao</p>
+                </div>
+            </div>
+            
+            <div class="instructor-section">
+                <div class="instructor-image">
+                    <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/kXloVgNnPlNa7bvoUCzUPqSCoXB3aJR4KKUT2M87.png" alt="Giảng viên">
+                </div>
+                <div class="instructor-text">
+                    <p>Đội ngũ giảng viên, trợ giảng có nhiều kinh nghiệm, trẻ trung và nhiệt tình</p>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <h2>Được tin tưởng bởi</h2>
+                <div  id="count" class="big-number" ></div>
+                <p>học viên</p>
+                <div id="count1" class="big-number"></div>
+                <p>doanh nghiệp</p>
+            </div>
+            
+            <div class="students-section">
+                <div class="students-image">
+                    <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/fPmKhMBCm2b2ZXSECdO074pqhTPBiOWFnuxcauYX.png" alt="Học viên ColorME">
+                </div>
+                <div class="students-text">
+                    <p>Thiết kế môi trường học tập vui vẻ, gần gũi cùng cơ sở vật chất hiện đại</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <img class="block-container-4" style="width: 15%; display: block; margin: 0 auto;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/vVREhNE2nGjU8xWlOdy6OM0iDzplagaOZiSlMz6h.png" alt="">   
+    </div>
+    <div class="header-5"></div> 
+    <div class="partner-title">
+        COLORME TỰ HÀO CỘNG TÁC VỚI CÁC DOANH NGHIỆP, TỔ CHỨC LỚN TRONG VÀ NGOÀI NƯỚC
+        <a href="#" class="signup-button">Đăng ký ngay</a>
+    </div>
+    <div class="partners-section">
+<div class="partners-row">
+    <div class="partners-track-left">
+        <div class="partners-grid">
+            <div class="partner-logo">
+                <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/8MOx7HSemlgxjcq89R2hQLsguZMGGrCROebcgrL2.png" alt="UEH">
+            </div>
+            <div class="partner-logo">
+                <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/partner-logo-1.png" alt="Partner 1">
+            </div>
+            <div class="partner-logo">
+                <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/partner-logo-2.png" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/partner-logo-3.png" alt="Partner 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="partners-row">
+    <div class="partners-track-right">
+        <div class="partners-grid">
+            <div class="partner-logo">
+                <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/partner-logo-4.png" alt="Partner 4">
+            </div>
+            <div class="partner-logo">
+                <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/partner-logo-5.png" alt="Partner 5">
+            </div>
+        </div>               
+    </div>
+</div>
+
+    </div>
+    <div class="testimonials">
+        <h2 class="testimonials-title">ĐÁNH GIÁ CỦA HỌC VIÊN</h2>       
+        <div class="testimonials-container">
+            <div class="testimonials-track">
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="person-image"></div>
+                        <div class="person-name">Trang Linh</div>
+                        <div class="rating">★ ★ ★ ★ ★</div>
+                        <div class="testimonial-text">Em rất thích học với chị Trâm Anh! Chị dạy rất hay!</div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                    <div class="testimonial-card purple">
+                        <div class="person-image"></div>
+                        <div class="person-name">Khánh Chi</div>
+                        <div class="rating">★ ★ ★ ★ ★</div>
+                        <div class="testimonial-text">Giảng viên rất tận tâm và nhiệt tình, buổi dạy sôi nổi.</div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="person-image"></div>
+                        <div class="person-name">Anh Thảo</div>
+                        <div class="rating">★ ★ ★ ★ ★</div>
+                        <div class="testimonial-text">Chị Đài dạy khá dễ hiểu, cho nhiều thời gian thực hành.</div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card purple">
+                        <div class="person-image"></div>
+                        <div class="person-name">Minh Tâm</div>
+                        <div class="rating">★ ★ ★ ★ ★</div>
+                        <div class="testimonial-text">Khóa học rất hữu ích và đáp ứng đúng nhu cầu của tôi.</div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="person-image"></div>
+                        <div class="person-name">Hoàng Nam</div>
+                        <div class="rating">★ ★ ★ ★ ★</div>
+                        <div class="testimonial-text">Giảng viên có kinh nghiệm thực tế, kiến thức chuyên sâu.</div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                    
+                    <div class="testimonial-card purple">
+                        <div class="person-image"></div>
+                        <div class="person-name">Thu Hà</div>
+                        <div class="rating">★ ★ ★ ★ ★</div>
+                        <div class="testimonial-text">Phương pháp giảng dạy dễ hiểu, tài liệu đầy đủ và hữu ích.</div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+ </body>
+</html>
