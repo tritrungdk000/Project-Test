@@ -21,7 +21,7 @@ window.addEventListener("scroll", function () {
 window.addEventListener("scroll", function () {
     let img = document.getElementById("scrollImg3");
     let scrollValue = window.scrollY; 
-    let moveY = Math.min(scrollValue * 0.5, 200);
+    let moveY = Math.min(scrollValue * 0.5, 500);
     img.style.transform = `translateY(-${moveY}px)`;
 });
 window.addEventListener("scroll", function () {
@@ -30,18 +30,20 @@ window.addEventListener("scroll", function () {
     let moveY = Math.min(scrollValue * 0.2, 500);
     img.style.transform = `translateY(-${moveY}px)`;
 });
-window.addEventListener('scroll', function() {
-    let scrollImg = document.getElementById('scrollImg5');
-    let scrollPosition = window.scrollY;
-    let moveRight = Math.min(scrollPosition / 2, 200);
-    scrollImg.style.right = (105 - moveRight) + "%";
-});
 window.addEventListener("scroll", function () {
-    let img = document.getElementById("bounceImg");
-    let scrollValue = window.scrollY;
-    let moveY = -scrollValue * 0.5;
-    img.style.transform = `translate(-50%, calc(-50% + ${moveY}px))`; 
-});
+    let img = document.getElementById("scrollImg5");
+    let scrollY = window.scrollY; 
+    let move = Math.sin(scrollY * 0.005) * 50; // Dao động lên xuống
+    
+    img.style.transform = `translateY(${move}px)`;
+  });
+window.addEventListener("scroll", function () {
+    let img = document.querySelector(".scroll-vertical-up-2");
+    let scrollY = window.scrollY;
+    let moveUp = Math.min(scrollY * 0.5, 500); // Giới hạn di chuyển tối đa
+  
+    img.style.transform = `translateY(${-moveUp}px)`;
+  });
 function countUp(elementId, start, end, duration) {
     let element = document.getElementById(elementId);
     let startTime = null;

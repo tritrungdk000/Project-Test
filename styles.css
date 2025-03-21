@@ -69,6 +69,7 @@ body {
 }
 .main-nav .menu .dropdown:hover .dropdown-content {
     display: block;
+    z-index: 1;
 }
 .main-nav .menu .dropdown-content a {
     color: #000;
@@ -161,7 +162,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
 .align-items-center {
     align-items: center !important;
@@ -195,6 +196,9 @@ body {
 .f-Matahari-SemiBold {
     font-family: "Matahari-600SemiBold";
 }
+.f-Matahari-Bold {
+    padding: 10px;
+}
 .display-4 {
     font-size: calc(1.475rem + 2.7vw);
     font-weight: 300;
@@ -219,11 +223,16 @@ body {
 }
 #scrollImg2 {
     transition: transform 0.3s ease-out;
+    z-index: -1;
 }
 #scrollImg3 {
     transition: transform 0.3s ease-out;
+    z-index:-1;
 }
 #scrollImg4 {
+    transition: transform 0.3s ease-out;
+}
+#scrollImg5 {
     transition: transform 0.3s ease-out;
 }
 .position-absolute {
@@ -267,6 +276,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    z-index: 1;
 }
 .section {
     background: white;
@@ -277,6 +287,7 @@ body {
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: linear-gradient(180deg, white, white, purple);
+    z-index: 1;
 }
 .section img {
     max-width: 100%;
@@ -317,11 +328,12 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 .image-container img {
     max-width: 100%;
     border-radius: 20px;
+    height: auto;
 }
 @media (max-width: 768px) {
     .section {
@@ -383,6 +395,7 @@ body {
     text-align: left;
     transition: transform 0.3s ease;
     position: relative;
+    z-index: 1;
 }
 .card:hover {
     transform: scale(1.05);
@@ -445,6 +458,7 @@ body {
     width: 50px;
     height: 50px;
     z-index: 1;
+    cursor: pointer;
 }
 @media (max-width: 768px) {
     .cards {
@@ -463,9 +477,11 @@ body {
 .mid-content {
     background-image: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/eeYbvO6QfqmeobqYASqUZRnm3YDtqwRESErK8G9o.png');
     object-fit: cover;
+    z-index: 1;
 }
 .scroll-vertical-up-4{
     z-index: -1;
+    width: 25%;
 }
 .consultation-2 {
     position: fixed;
@@ -479,6 +495,7 @@ body {
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    cursor: pointer;
 }
 .container-2 {
     text-align: center;
@@ -489,7 +506,7 @@ body {
     right: 105%;
     width: 20%;
     z-index: -1;
-    rotate: 90deg
+    rotate: 90deg;
 }
 .header-2 {
     margin-bottom: 20px;
@@ -519,18 +536,23 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap:5px;
+    align-items: flex-end
 }
 .card-2 {
-    background: linear-gradient(180deg, #4A00E0 0%, #8E2DE2 100%);
     border-radius: 20px;
-    padding: 20px;
-    width: 431px;
-    height: 601px;
     color: #fff;
     text-align: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    background-size: cover;
+    flex-direction: column; 
+}
+
+.card-2:nth-child(2) {
+    top: -20px; /* Đẩy card giữa lên cao hơn */
 }
 .card-2 img {
     width: 100%;
@@ -543,29 +565,33 @@ body {
     transform: scale(1.05);
 }
 .card-2 h3, .card-2 p {
-    position: absolute;
     width: 100%;
     left: 0;
-    color: #fff;
     padding: 0 20px;
     box-sizing: border-box;
+
 }
 .card-2 h3 {
     font-size: 18px;
     margin: 10px 0;
     bottom: 60px;
     color: #000;
+    position: absolute;
+
+
 }
 .card-2 p {
     font-size: 14px;
     bottom: 20px;
     color: #000;
+    position: absolute;
+
 }
-.card-2-content{
-    color: white;
+.card-2-content h3 {
+    color: white
 }
-.card-2:nth-child(2) {
-    margin-top: -20px;
+.card-2-content p {
+    color: white
 }
 .consultation-2 {
     position: fixed;
@@ -589,12 +615,12 @@ body {
     }
     .card-2 {
         width: 90%;
-        height: auto;
     }
-}
-@media (min-width: 769px) {
-    .card-2:nth-child(2) {
-        margin-top: -40px;
+    .card-2 h3 {
+        font-size: 16px;
+    }
+    .card-2 p {
+        font-size: 13px;
     }
 }
 .container-3 {
@@ -650,8 +676,9 @@ body {
 }
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 5px;
 }
 .card-3 {
     background-color: white;
@@ -696,9 +723,36 @@ body {
 .container-f{
         background-size: 100% 100%;
 }
-.scroll-vertical-up-2 {
-    transition: transform 0.6s cubic-bezier(0, 0, 0, 1) 0s !important;
+@media (max-width: 1024px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+    }
 }
+
+/* Điều chỉnh trên mobile */
+@media (max-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(1, 1fr); /* 1 cột trên mobile */
+    }
+}
+.scroll-vertical-up-2 {
+    position: absolute;
+    width: 25%;
+    right: 0;
+    top: 1500px;
+    transition: transform 0.3s ease-out;
+    z-index: -1 ;
+  }
+@keyframes scrollAnimation {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 .w-100 {
     width: 100% !important;
 }
