@@ -1,6 +1,9 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Be-Vietnam', sans-serif;
+    font-size: 1rem;
+    overflow-x: hidden;
+
 }
 .top-bar {
     background-color: #000;
@@ -156,7 +159,8 @@ body {
 }
 .main-content{
     padding-top: 100px;
-    padding: 10%;
+    padding-left: .75rem;
+    padding-right: .75rem;
     background-image: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/hRoGqiNVaJUqEygp3Vl9U5uptMwUOjKUfftvyWaB.jpg');
     background-size: cover;
     background-position: center;
@@ -243,11 +247,13 @@ body {
 }
 .row{
     display: flex;
-
+    flex-wrap: wrap;
 }
 .col-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
+    max-width: 100%; 
+    object-fit: contain;
 }
 .text-center {
     text-align: center !important;
@@ -273,10 +279,12 @@ body {
     color: #fff !important; 
 }
 .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
     z-index: 1;
+    width: 100%;
+    padding-top: 20px;
+    padding: 40px;
 }
 .section {
     background: white;
@@ -291,14 +299,13 @@ body {
 }
 .section img {
     max-width: 100%;
-    border-radius: 20px;
 }
 .section-content {
     flex: 1;
     padding: 20px;
 }
 .section-content h2 {
-    color: #4a148c;
+    color: #300557;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -309,6 +316,7 @@ body {
 .section-content ul li {
     margin-bottom: 10px;
     font-size: 16px;
+    color: #300557;
 }
 .section-content ul li::before {
     content: "\2022";
@@ -338,17 +346,21 @@ body {
 @media (max-width: 768px) {
     .section {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
     .section-content {
         padding: 10px;
+    }
+    .container {
+        padding: 0;
+        padding-bottom: 40px;
     }
 }
 .right-0{
     right: 0;
 }
 .bottom-0{
-    right: 0px;
+    right: 20px;
 }
 .main-container {
     text-align: center;
@@ -465,6 +477,9 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .card {
+        width: 100%;
+    }
     .register-button {
         position: static;
         margin: 0 auto 20px;
@@ -552,7 +567,8 @@ body {
 }
 
 .card-2:nth-child(2) {
-    top: -20px; /* Đẩy card giữa lên cao hơn */
+    top: -20px;
+    margin-top: 40px;
 }
 .card-2 img {
     width: 100%;
@@ -614,13 +630,24 @@ body {
         align-items: center;
     }
     .card-2 {
-        width: 90%;
+        width: 100%;
     }
     .card-2 h3 {
         font-size: 16px;
     }
     .card-2 p {
         font-size: 13px;
+    }
+    .consultation-2 {
+        position: fixed;   
+        bottom: 100px; 
+        right: 20px; 
+        left: auto;       
+        padding: 12px 18px;
+        border-radius: 50px;
+        width: auto;   
+        max-width: 180px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 }
 .container-3 {
@@ -643,6 +670,7 @@ body {
     color: #6a0dad;
     font-size: 18px;
     margin: 5px 0 20px;
+    font-weight: 700;
 }
 .buttons-3 {
     display: flex;
@@ -651,16 +679,14 @@ body {
     margin-bottom: 20px;
 }
 .buttons-3 button {
-    background-color: #6a0dad;
-    color: white;
+    background-color: white;
+    color: #300557;
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px;
-}
-.buttons-3 button:hover {
-    background-color: #5a0c9d;
+    font-size: 1.05rem;
+    font-weight: 700;
 }
 .register-button-3 {
     background-color: #6a0dad;
@@ -670,15 +696,18 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 700;
 }
 .register-button-3:hover {
     background-color: #5a0c9d;
+}
+.fas {
+    rotate: -45deg;
 }
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, auto);
-    gap: 5px;
 }
 .card-3 {
     background-color: white;
@@ -686,6 +715,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: left;
+    display: flex;
+    position: relative;
 }
 .card-3 img {
     width: 100%;
@@ -693,30 +724,42 @@ body {
 }
 .card-content-3 {
     padding: 20px;
+    padding-bottom: 80px;
 }
 .card-content-3 h3 {
-    color: #6a0dad;
+    color: white;
     font-size: 20px;
     margin: 0 0 10px;
+    background-color: #300557;
+    border-radius: 50rem;
+    width: 100px;
+    text-align: center;
+    padding: 5;
+    font-weight: 700;
+
 }
 .card-content-3 p {
     color: #333;
     font-size: 16px;
     margin: 0 0 10px;
+    font-weight: 700;
+
 }
 .card-footer-3 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-}
-.card-footer-3 span {
-    color: #6a0dad;
-    font-size: 16px;
+    border-radius: 50%;;
+    background-color: #300557;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
 }
 .card-footer-3 a {
-    color: #6a0dad;
+    color: white;
     font-size: 20px;
     text-decoration: none;
 }
@@ -725,14 +768,13 @@ body {
 }
 @media (max-width: 1024px) {
     .grid-3 {
-        grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Điều chỉnh trên mobile */
 @media (max-width: 768px) {
     .grid-3 {
-        grid-template-columns: repeat(1, 1fr); /* 1 cột trên mobile */
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 .scroll-vertical-up-2 {
@@ -1140,7 +1182,7 @@ body {
 .testimonials-track {
     display: flex;
     width: 200%; 
-    animation: slideTestimonials 20s linear infinite;
+    animation: slideTestimonials 5s linear infinite;
 }
 
 .testimonial-slide {
@@ -1214,15 +1256,21 @@ body {
     .partner-title {
         font-size: 18px;
     }
-    
+    .testimonial-slide .testimonial-card {
+        display: none;
+    }
+    .testimonial-slide .testimonial-card:first-child {
+        display: block;
+        width: 90%;
+    }
     .testimonial-slide {
         flex-direction: column;
         align-items: center;
+        
     }
-    
     .testimonial-card {
-        flex: 0 0 80%;
         margin-bottom: 20px;
+        width: 90%;
     }
 }
 .container-5 {
